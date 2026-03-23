@@ -1,4 +1,5 @@
 import 'package:filmku/core/theme/app_colors.dart';
+import 'package:filmku/features/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -14,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    const Center(child: Text("Home Screen ")),
+    const HomeScreen(),
     const Center(child: Text("Ticket Screen ")),
     const Center(child: Text("Bookmark Screen ")),
   ];
