@@ -64,6 +64,14 @@ class AppTextStyles {
     height: 1.5,
   );
 
+  static const TextStyle bodyTextSmall = TextStyle(
+    fontFamily: sansSerifFontFamily,
+    fontSize: 10,
+    fontWeight: FontWeight.w400, // Regular
+    color: AppColors.textSecondary,
+    height: 1.5,
+  );
+
   static const TextStyle caption = TextStyle(
     fontFamily: sansSerifFontFamily,
     fontSize: 12,
