@@ -1,4 +1,4 @@
-import 'package:filmku/core/theme/app_text_styles.dart';
+import 'package:filmku/features/main/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Filmku',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: Scaffold(body: Center(child: Text('Hello World'))),
+      home: MainScreen(),
     );
   }
 }
