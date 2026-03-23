@@ -66,7 +66,7 @@ class AppTextStyles {
 
   static const TextStyle bodyTextSmall = TextStyle(
     fontFamily: sansSerifFontFamily,
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: FontWeight.w400, // Regular
     color: AppColors.textSecondary,
     height: 1.5,
@@ -81,7 +81,7 @@ class AppTextStyles {
 
   static const TextStyle badgeText = TextStyle(
     fontFamily: sansSerifFontFamily,
-    fontSize: 10,
+    fontSize: 8,
     fontWeight: FontWeight.bold,
     color: AppColors.badgeText,
   );
