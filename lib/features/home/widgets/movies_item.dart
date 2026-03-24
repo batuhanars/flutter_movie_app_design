@@ -1,5 +1,6 @@
 import 'package:filmku/core/theme/app_colors.dart';
 import 'package:filmku/core/theme/app_text_styles.dart';
+import 'package:filmku/features/detail/screens/detail_screen.dart';
 import 'package:filmku/models/movie_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -16,22 +17,32 @@ class MoviesItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: AppColors.textPrimary.withValues(alpha: 0.1),
-                  blurRadius: 10,
-                  offset: const Offset(0, 10),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailScreen(movie: movie),
                 ),
-              ],
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(5),
-              child: Image.asset(
-                movie.posterUrl,
-                height: 212,
-                fit: BoxFit.cover,
+              );
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.textPrimary.withValues(alpha: 0.1),
+                    blurRadius: 10,
+                    offset: const Offset(0, 10),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(5),
+                child: Image.asset(
+                  movie.posterUrl,
+                  height: 212,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),

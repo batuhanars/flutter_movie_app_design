@@ -29,16 +29,15 @@ class PopularMovies extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
-          height: 283,
-          child: ListView.separated(
-            itemCount: MockData.popular.length,
-            separatorBuilder: (context, index) => const SizedBox(height: 16),
-            itemBuilder: (context, index) {
-              final movie = MockData.popular[index];
-              return PopularMoviesItem(movie: movie);
-            },
-          ),
+        ListView.separated(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: MockData.popular.length,
+          separatorBuilder: (context, index) => const SizedBox(height: 16),
+          itemBuilder: (context, index) {
+            final movie = MockData.popular[index];
+            return PopularMoviesItem(movie: movie);
+          },
         ),
       ],
     );
