@@ -66,7 +66,7 @@ class AppTextStyles {
 
   static const TextStyle bodyTextSmall = TextStyle(
     fontFamily: sansSerifFontFamily,
-    fontSize: 12,
+    fontSize: 10,
     fontWeight: FontWeight.w400, // Regular
     color: AppColors.textSecondary,
     height: 1.5,
